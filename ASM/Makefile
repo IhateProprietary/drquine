@@ -6,7 +6,7 @@
 #    By: jye <marvin@42.fr>                         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/19 19:14:55 by jye               #+#    #+#              #
-#    Updated: 2019/02/19 19:42:02 by jye              ###   ########.fr        #
+#    Updated: 2019/02/23 11:17:18 by jye              ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -23,15 +23,15 @@ NAME = $(NAME3) $(NAME2) $(NAME1)
 
 all: $(NAME)
 
-$(NAME1):
+$(NAME1): Sully.s
 	$(ASMC) $@.s $(ASMFLAGS)
 	$(CC) $@.o -o $@
 
-$(NAME2):
+$(NAME2): Grace.s
 	$(ASMC) $@.s $(ASMFLAGS)
 	$(CC) $@.o -o $@
 
-$(NAME3):
+$(NAME3): Colleen.s
 	$(ASMC) $@.s $(ASMFLAGS)
 	$(CC) $@.o -o $@
 
